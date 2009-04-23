@@ -1,0 +1,24 @@
+<h1>Listing maestros</h1>
+
+<table>
+  <tr>
+    <th>Clave</th>
+    <th>Titulo</th>
+    <th>Nombre</th>
+  </tr>
+
+<% for maestro in @maestros %>
+  <tr>
+    <td><%=h maestro.clave %></td>
+    <td><%=h maestro.titulo %></td>
+    <td><%=h maestro.nombre %></td>
+    <td><%= link_to 'Show', maestro %></td>
+    <td><%= link_to 'Edit', edit_maestro_path(maestro) %></td>
+    <td><%= link_to 'Destroy', maestro, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New maestro', new_maestro_path %>

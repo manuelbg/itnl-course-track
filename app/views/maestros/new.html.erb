@@ -1,0 +1,27 @@
+<h1>New maestro</h1>
+
+<% form_for(@maestro) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :clave %><br />
+    <%= f.text_field :clave %>
+  </p>
+  <p>
+   	 <%= f.label :titulo %><br />
+	 <%= f.select :titulo, %w{MC. M.I.A. ING. LIC. DR.} %>
+  </p>
+<p>
+    <%= f.label :departamento_id %><br />
+    <%= f.select :departamento_id, Departamento.find(:all, :order => 'nombre ASC').map {|u| [u.nombre, u.id]} %>
+  </p>
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', maestros_path %>
