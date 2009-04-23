@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  maestro_id: 1
+  numero: 1
+  anio: 1
+
+two:
+  maestro_id: 1
+  numero: 1
+  anio: 1

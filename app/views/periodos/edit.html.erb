@@ -1,0 +1,24 @@
+<h1>Editing periodo</h1>
+
+<% form_for(@periodo) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :maestro_id %><br />
+    <%= f.text_field :maestro_id %>
+  </p>
+  <p>
+    <%= f.label :numero %><br />
+    <%= f.text_field :numero %>
+  </p>
+  <p>
+    <%= f.label :anio %><br />
+    <%= f.text_field :anio %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @periodo %> |
+<%= link_to 'Back', periodos_path %>

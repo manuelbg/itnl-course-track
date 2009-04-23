@@ -1,0 +1,24 @@
+<h1>Listing periodos</h1>
+
+<table>
+  <tr>
+    <th>Maestro</th>
+    <th>Numero</th>
+    <th>Anio</th>
+  </tr>
+
+<% for periodo in @periodos %>
+  <tr>
+    <td><%=h periodo.maestro_id %></td>
+    <td><%=h periodo.numero %></td>
+    <td><%=h periodo.anio %></td>
+    <td><%= link_to 'Show', periodo %></td>
+    <td><%= link_to 'Edit', edit_periodo_path(periodo) %></td>
+    <td><%= link_to 'Destroy', periodo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New periodo', new_maestro_periodo_path %>
